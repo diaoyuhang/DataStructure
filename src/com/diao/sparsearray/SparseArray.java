@@ -11,6 +11,14 @@ import java.io.*;
 public class SparseArray {
     public static void main(String[] args) throws IOException {
 
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(1);
+        stringBuffer.append(2);
+        stringBuffer.append(3);
+        stringBuffer.append(4);
+
+        System.out.println(stringBuffer.toString().split(""));
+
         //原始数组
         int[][] originalArr = new int[11][11];
         originalArr[1][2] = 1;
@@ -18,6 +26,7 @@ public class SparseArray {
         originalArr[3][4] = 2;
 
         for (int[] row : originalArr) {
+
             for (int data : row) {
                 System.out.printf("%d\t", data);
             }
@@ -52,6 +61,7 @@ public class SparseArray {
                     sparseArray[count][2] = originalArr[i][j];
                 }
             }
+            continue;
         }
 
         //将稀疏数组保存到本地
