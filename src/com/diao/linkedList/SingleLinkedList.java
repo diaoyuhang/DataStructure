@@ -8,7 +8,7 @@ package com.diao.linkedList;
  **/
 public class SingleLinkedList {
 
-    private HeroNode head = new HeroNode(0, "", "");
+    public HeroNode head = new HeroNode(0, "", "");
 
     /**
      * @param node: 新节点
