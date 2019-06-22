@@ -58,7 +58,7 @@ public class Maze {
         } else {
             if (map[i][j] == 0) {//表示该点没走过
 
-                //行走策略下左上右
+                //行走策略下右上左
                 map[i][j] = 2;//表示该点已经走过
                 if (setway(map, i + 1, j)) {
                     return true;
