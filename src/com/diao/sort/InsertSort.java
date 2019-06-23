@@ -17,8 +17,11 @@ public class InsertSort {
 
     //插入排序
     public static void insertSort(int[] arrs) {
+
         int insertVal = 0;//待插入的数
         int insertIndex = 0;//待插入的数的下标-1
+
+        //将数组中的第一个数看作为有序的数组，将后面的数值按序插入到前面的有序数组中
         for (int i = 1; i < arrs.length; i++) {
             insertVal = arrs[i];
             insertIndex = i - 1;
