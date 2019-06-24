@@ -12,21 +12,21 @@ import java.util.Date;
  **/
 public class QuickSort {
     public static void main(String[] args) {
-//        int[] arr = {8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
+        int[] arr = {8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
 
-        int[] arr = new int[8];
-        for (int i = 0; i < 8; i++) {
-            arr[i] = (int) (Math.random() * 80000);
-        }
-        Date data1 = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String date1Str = simpleDateFormat.format(data1);
-        System.out.println("排序前的时间是=" + date1Str);
+//        int[] arr = new int[9];
+//        for (int i = 0; i < 9; i++) {
+//            arr[i] = (int) (Math.random() * 80000);
+//        }
+//        Date data1 = new Date();
+//        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        String date1Str = simpleDateFormat.format(data1);
+//        System.out.println("排序前的时间是=" + date1Str);
         quickSort(arr, 0, arr.length - 1);
 
-        Date data2 = new Date();
-        String date2Str = simpleDateFormat.format(data2);
-        System.out.println("排序前的时间是=" + date2Str);
+//        Date data2 = new Date();
+//        String date2Str = simpleDateFormat.format(data2);
+//        System.out.println("排序前的时间是=" + date2Str);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -63,12 +63,12 @@ public class QuickSort {
             arr[l] = arr[r];
             arr[r] = temp;
 
-            if (arr[l] == pivot) {
+            /*if (arr[l] == pivot) {
                 r--;
             }
             if (arr[r] == pivot) {
                 l++;
-            }
+            }*/
         }
 
         if (l == r) {
