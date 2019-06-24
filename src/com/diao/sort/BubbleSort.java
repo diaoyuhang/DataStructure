@@ -23,7 +23,7 @@ public class BubbleSort {
         for (int i = 0; i < arrs.length - 1; i++) {//总共排多少趟
             //一趟排序
             for (int j = 0; j < arrs.length - 1 - i; j++) {
-                if (arrs[j] > arrs[j + 1]) {
+                if (arrs[j] > arrs[j + 1]) {//将相邻的两个元素进行比较
                     flag = true;
                     temp = arrs[j + 1];
                     arrs[j + 1] = arrs[j];
