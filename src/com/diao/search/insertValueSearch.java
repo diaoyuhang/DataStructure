@@ -15,7 +15,8 @@ public class insertValueSearch {
 
     public static int insertSearch(int[] arr, int left, int right, int findValue) {
 
-        if (left > right) {
+        //这里一定要判断，不然下面的的mid可能就会越界
+        if (left > right || findValue < arr[left] || findValue > arr[right]) {
             return -1;
         }
 
