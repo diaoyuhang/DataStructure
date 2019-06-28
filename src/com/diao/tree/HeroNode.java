@@ -18,6 +18,25 @@ public class HeroNode {
         this.name = name;
     }
 
+    //删除节点
+    public void delNode(int id) {
+        if (this.left != null && this.left.id == id) {
+            this.left = null;
+            return;
+        }
+        if (this.right != null && this.right.id == id) {
+            this.right = null;
+            return;
+        }
+
+        if (this.left != null) {
+            this.left.delNode(id);
+        }
+        if (this.right != null) {
+            this.right.delNode(id);
+        }
+    }
+
     //后序查找
     public HeroNode postOrderSearch(int id) {
         HeroNode resNode = null;

@@ -17,6 +17,18 @@ public class BinaryTree {
         this.root = root;
     }
 
+    //删除节点
+    public void delNode(int id) {
+        if (root != null) {
+            if (root.getId() == id) {
+                root = null;
+            } else {
+                root.delNode(id);
+            }
+        }
+
+    }
+
     //后序查找
     public HeroNode postOrderSearch(int id) {
         return root.postOrderSearch(id);
